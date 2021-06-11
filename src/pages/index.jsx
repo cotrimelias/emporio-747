@@ -12,7 +12,7 @@ import {
 
 export const query = graphql`
   query {
-    shopifyCollection(handle: { eq: "frontpage" }) {
+    shopifyCollection {
       products {
         ...ProductCard
       }
