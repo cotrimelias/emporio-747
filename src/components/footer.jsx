@@ -17,18 +17,17 @@ export function Footer() {
         <div className={logos}>
           <Logo />
         </div>
-        <strong>gatsby-starter-shopify</strong> change this by editing{" "}
-        <code>src/components/footer.jsx</code>
+        <strong>vc é curiosa em</strong>
       </div>
       <nav className={links} aria-label="footer">
         <ul className={footerNavList}>
           <li className={footerNavListItem}>
             <a href="https://github.com/gatsbyjs/gatsby-starter-shopify">
-              Source Code and Docs
+              Termos de Serviço
             </a>
           </li>
           <li className={footerNavListItem}>
-            <a href="https://www.gatsbyjs.com/cloud/">About Gatsby Cloud</a>
+            <a href="https://www.gatsbyjs.com/cloud/">Política de Garantia</a>
           </li>
           {process.env.GATSBY_DEMO_STORE === "true" && (
             <li className={footerNavListItem}>
