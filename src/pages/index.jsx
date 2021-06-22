@@ -24,13 +24,8 @@ export default function IndexPage({ data }) {
     <Layout>
       <div className={container}>
         <h1 className={intro}>Bem vindo ao Empório 737.</h1>
-        <p className={callOut}>
-          Esse é apenas um template de teste para mostrar as funcionalidades gerais
-        </p>
-        <p className={callToAction}>
-          Versão 2.0.3.245
-          
-        </p>
+        <p className={callOut}>Teste</p>
+        <p className={callToAction}>Versão 2.0.3.245</p>
       </div>
       <ProductListing products={data.shopifyCollection.products} />
     </Layout>

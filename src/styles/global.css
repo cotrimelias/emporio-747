@@ -1,12 +1,12 @@
 body {
-  font-family: var(--font-body);
-  color: var(--text-color);
+    font-family: var(--font-body);
+    color: var(--text-color);
 }
 
 .gatsby-image-wrapper {
-  margin: auto;
+    margin: auto;
 }
 
 .gatsby-image-wrapper [data-main-image] {
-  border-radius: var(--radius-sm);
+    border-radius: var(--radius-sm);
 }

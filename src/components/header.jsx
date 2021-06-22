@@ -12,6 +12,7 @@ import {
   logo as logoCss,
   searchButton,
   nav,
+  textlogo,
 } from "./header.module.css"
 
 export function Header() {
@@ -27,7 +28,7 @@ export function Header() {
     <div className={container}>
       <header className={header}>
         <Link to="/" className={logoCss}>
-          <Logo />
+          <div className={textlogo}>empório 747</div>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>
