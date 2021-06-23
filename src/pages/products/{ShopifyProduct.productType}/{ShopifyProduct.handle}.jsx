@@ -128,7 +128,7 @@ export default function Product({ data: { product, suggestions } }) {
                     >
                       <GatsbyImage
                         objectFit="contain"
-                        loading={index === 0 ? "eager" : "lazy"}
+                        loading={index === 0 ? "eager" : "eager"}
                         alt={
                           image.altText
                             ? image.altText
@@ -215,7 +215,7 @@ export default function Product({ data: { product, suggestions } }) {
 }
 
 export const query = graphql`
-  query($id: String!, $productType: String!) {
+  query ($id: String!, $productType: String!) {
     product: shopifyProduct(id: { eq: $id }) {
       title
       description

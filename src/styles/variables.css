@@ -9,6 +9,7 @@
     --grey-90: #232129;
     --grey-50: #78757a;
     --green-80: #088413;
+    --pink-80: #f2a999;
     --green-50-rgb: 55, 182, 53;
     --white: #ffffff;
     /* radii */
@@ -45,7 +46,7 @@
     --text-3xl: 32px;
     /* role-based tokens */
     /* colors */
-    --primary: var(--green-80);
+    --primary: var(--pink-80);
     --background: var(--white);
     --border: var(--black-fade-5);
     /* transitions */

@@ -1,36 +1,39 @@
 .navStyle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow-x: auto;
-  white-space: nowrap;
-  font-weight: var(--medium);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-weight: var(--medium);
+    font-family: "Public Sans";
+    margin-right: 10%;
 }
 
 .navLink {
-  cursor: pointer;
-  text-decoration: none;
-  height: var(--size-input);
-  display: flex;
-  color: var(--text-color-secondary);
-  align-items: center;
-  padding-left: var(--space-md);
-  padding-right: var(--space-md);
+    cursor: pointer;
+    text-decoration: none;
+    height: var(--size-input);
+    display: flex;
+    color: #676262;
+    align-items: center;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
 }
 
 .navLink:hover {
-  color: var(--text-color);
+    color: var(--text-color);
 }
 
 .activeLink,
 .navLink[aria-active="page"] {
-  color: var(--primary);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 .activeLink:hover,
 .navLink[aria-active="page"]:hover {
-  color: var(--primary);
+    color: var(--primary);
 }

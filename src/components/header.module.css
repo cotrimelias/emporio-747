@@ -10,10 +10,12 @@
     display: grid;
     width: 100%;
     padding: var(--size-gap) var(--size-gutter);
-    grid-template-columns: var(--size-input) 1fr min-content min-content;
-    grid-template-areas: "logo nada searchButton cartButton" "navHeader navHeader navHeader navHeader";
+    grid-template-columns: 2fr 12fr min-content min-content;
+    grid-template-areas: "logo . searchButton cartButton" "navHeader navHeader navHeader navHeader";
     align-items: center;
     background-color: var(--background);
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px !important;
 }
 
 .header::after {
@@ -33,15 +35,11 @@
     }
 }
 
-@font-face {
-    font-family: "Raleway";
-    src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
-}
-
 .textlogo {
     font-family: "Raleway";
-    font-weight: 500;
-    font-size: 25px;
+    font-weight: var(--semibold);
+    font-size: 2.5em;
+    color: black;
 }
 
 .logo {

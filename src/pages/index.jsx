@@ -1,7 +1,9 @@
 import * as React from "react"
+import "../components/fonts.module.css"
 import { graphql } from "gatsby"
 import { Layout } from "../components/layout"
 import { ProductListing } from "../components/product-listing"
+import { Carousel } from "../components/carousel"
 import {
   container,
   intro,
@@ -19,14 +21,11 @@ export const query = graphql`
     }
   }
 `
+
 export default function IndexPage({ data }) {
   return (
     <Layout>
-      <div className={container}>
-        <h1 className={intro}>Bem vindo ao Empório 737.</h1>
-        <p className={callOut}>Teste</p>
-        <p className={callToAction}>Versão 2.0.3.245</p>
-      </div>
+      <Carousel />
       <ProductListing products={data.shopifyCollection.products} />
     </Layout>
   )
