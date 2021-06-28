@@ -34,25 +34,25 @@ export default function CartPage() {
       <div className={wrap}>
         {emptyCart ? (
           <div className={emptyStateContainer}>
-            <h1 className={emptyStateHeading}>Your cart is empty</h1>
+            <h1 className={emptyStateHeading}>Seu carrinho está vazio</h1>
+            <p>Parece que você ainda não encontrou nada :&#40;</p>
             <p>
-              Looks like you haven’t found anything yet. We understand that
-              sometimes it’s hard to chose — maybe this helps:
+              A gente entende que às vezes é difícil, mas talvez isso ajude:
             </p>
             <Link to="/search?s=BEST_SELLING" className={emptyStateLink}>
-              View trending products
+              Ver produtos em alta
             </Link>
           </div>
         ) : (
           <>
-            <h1 className={title}>Your cart</h1>
+            <h1 className={title}>Seu carrinho</h1>
             <table className={table}>
               <thead>
                 <tr>
-                  <th className={imageHeader}>Image</th>
-                  <th className={productHeader}>Product</th>
-                  <th className={collapseColumn}>Price</th>
-                  <th>Qty.</th>
+                  <th className={imageHeader}>Imagem</th>
+                  <th className={productHeader}>Produto</th>
+                  <th className={collapseColumn}>Preço</th>
+                  <th>Qt.</th>
                   <th className={[totals, collapseColumn].join(" ")}>Total</th>
                 </tr>
               </thead>
@@ -77,7 +77,7 @@ export default function CartPage() {
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
-                  <td className={labelColumn}>Taxes</td>
+                  <td className={labelColumn}>Taxas</td>
                   <td className={totals}>
                     {formatPrice(
                       checkout.totalTaxV2.currencyCode,
@@ -89,14 +89,14 @@ export default function CartPage() {
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
-                  <td className={labelColumn}>Shipping</td>
-                  <td className={totals}>Calculated at checkout</td>
+                  <td className={labelColumn}>Frete</td>
+                  <td className={totals}>Calculado no checkout</td>
                 </tr>
                 <tr className={grandTotal}>
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
-                  <td className={labelColumn}>Total Price</td>
+                  <td className={labelColumn}>Preço total</td>
                   <td className={totals}>
                     {formatPrice(
                       checkout.totalPriceV2.currencyCode,

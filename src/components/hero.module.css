@@ -1,0 +1,14 @@
+.heroText {
+    font-family: Raleway;
+    font-weight: 900;
+    font-size: var(--text-3xl);
+}
+
+.heroContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}

@@ -3,5 +3,5 @@
     grid-template-columns: var(--product-grid);
     place-items: center;
     gap: var(--size-gutter-raw);
-    padding: 64px 250px;
+    padding: 64px 188px;
 }

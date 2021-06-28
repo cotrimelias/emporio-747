@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { Layout } from "../components/layout"
 import { ProductListing } from "../components/product-listing"
 import { Carousel } from "../components/carousel"
+import { HeroText } from "../components/hero"
 import {
   container,
   intro,
@@ -26,6 +27,7 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <Carousel />
+      <HeroText>Nossos produtos</HeroText>
       <ProductListing products={data.shopifyCollection.products} />
     </Layout>
   )

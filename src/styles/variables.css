@@ -9,7 +9,10 @@
     --grey-90: #232129;
     --grey-50: #78757a;
     --green-80: #088413;
+    --black: #0d0d0d;
+    --brown: #d9c1b4;
     --pink-80: #f2a999;
+    --off-white: #f2eddc;
     --green-50-rgb: 55, 182, 53;
     --white: #ffffff;
     /* radii */
@@ -32,6 +35,9 @@
     --tracked: 0.075em;
     --tight: -0.015em;
     /* font-weight */
+    --thin: 100;
+    --ultralight: 200;
+    --light: 300;
     --body: 400;
     --medium: 500;
     --semibold: 600;
@@ -47,6 +53,8 @@
     /* role-based tokens */
     /* colors */
     --primary: var(--pink-80);
+    --secondary: var(--off-white);
+    --pallete5: var(--black);
     --background: var(--white);
     --border: var(--black-fade-5);
     /* transitions */

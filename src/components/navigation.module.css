@@ -5,9 +5,10 @@
     justify-content: center;
     overflow-x: auto;
     white-space: nowrap;
-    font-weight: var(--medium);
+    font-weight: var(--light);
     font-family: "Public Sans";
     margin-right: 10%;
+    text-transform: uppercase;
 }
 
 .navLink {
@@ -15,14 +16,15 @@
     text-decoration: none;
     height: var(--size-input);
     display: flex;
-    color: #676262;
+    color: var(--black);
     align-items: center;
     padding-left: var(--space-md);
     padding-right: var(--space-md);
+    transition: 125ms;
 }
 
 .navLink:hover {
-    color: var(--text-color);
+    color: var(--brown);
 }
 
 .activeLink,

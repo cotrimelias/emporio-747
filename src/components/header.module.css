@@ -6,6 +6,17 @@
     top: 0;
 }
 
+.headerStrip {
+    background-color: var(--brown);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    /*text-transform: uppercase;*/
+    width: 100%;
+    height: 35px;
+}
+
 .header {
     display: grid;
     width: 100%;
@@ -40,6 +51,7 @@
     font-weight: var(--semibold);
     font-size: 2.5em;
     color: black;
+    min-width: 238px;
 }
 
 .logo {
@@ -67,16 +79,17 @@
 }
 
 .searchButton {
-    color: var(--text-color-secondary);
+    color: var(--black);
     grid-area: searchButton;
     width: var(--size-input);
     height: var(--size-input);
     display: grid;
     place-items: center;
+    transition: 125ms;
 }
 
 .searchButton:hover {
-    color: var(--text-color);
+    color: var(--brown);
 }
 
 .searchButton[aria-current="page"] {

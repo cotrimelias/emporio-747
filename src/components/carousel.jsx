@@ -9,12 +9,14 @@ export function Carousel({}) {
         display: "flex",
         "align-items": "center",
         "justify-content": "center",
+        "padding-bottom": "32px",
       }}
     >
       <StaticImage
         src="../images/carousel1.png"
         alt="Frete Grátis"
         placeholder="blurred"
+        style={{ width: "80%" }}
       />
     </div>
   )

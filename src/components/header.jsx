@@ -4,6 +4,7 @@ import { StoreContext } from "../context/store-context"
 import Logo from "../icons/logo"
 import { Navigation } from "./navigation"
 import { CartButton } from "./cart-button"
+import { AccountButton } from "./account-button"
 import SearchIcon from "../icons/search"
 import { Toast } from "./toast"
 import {
@@ -13,6 +14,7 @@ import {
   searchButton,
   nav,
   textlogo,
+  headerStrip,
 } from "./header.module.css"
 
 export function Header() {
@@ -25,23 +27,33 @@ export function Header() {
   }, 0)
 
   return (
-    <div className={container}>
+    <div className={container} style={{ "flex-direction": "column" }}>
+      <div className={headerStrip}>
+        <h3>Seu oásis é aqui&nbsp;</h3> {"-"}
+        <h3>&nbsp;Aqui você encontra o que não há em lugar nenhum&nbsp;</h3>
+        {" - "}
+        <h3>&nbsp;Para todos os gostos. Para todos os bolsos. Para você.</h3>
+      </div>
       <header className={header}>
         <Link to="/" className={logoCss}>
           <div className={textlogo}>empório 747</div>
         </Link>
         <Navigation className={nav} />
-        <Link to="/search" className={searchButton}>
-          <SearchIcon />
-        </Link>
-        <CartButton quantity={quantity} />
+        <div style={{ display: "flex" }}>
+          <Link to="/search" className={searchButton}>
+            <SearchIcon />
+          </Link>
+
+          <CartButton quantity={quantity} />
+          <AccountButton />
+        </div>
       </header>
       <Toast show={loading || didJustAddToCart}>
         {!didJustAddToCart ? (
-          "Updating…"
+          "Atualizando…"
         ) : (
           <>
-            Added to cart{" "}
+            Adicionado ao carrinho{" "}
             <svg
               width="14"
               height="14"

@@ -157,7 +157,7 @@ function SearchPage({
 
   return (
     <Layout>
-      <h1 className={visuallyHidden}>Search Results</h1>
+      <h1 className={visuallyHidden}>Resultados da Pesquisa</h1>
       <div className={main}>
         <div className={search} aria-hidden={modalOpen}>
           <SearchBar defaultTerm={filters.term} setFilters={setFilters} />
@@ -175,17 +175,17 @@ function SearchPage({
           </button>
           <div className={sortSelector}>
             <label>
-              <span>Sort by:</span>
+              <span>Classificar por:</span>
               <select
                 value={sortKey}
                 // eslint-disable-next-line
                 onChange={(e) => setSortKey(e.target.value)}
               >
-                <option value="RELEVANCE">Relevance</option>
-                <option value="PRICE">Price</option>
-                <option value="TITLE">Title</option>
-                <option value="CREATED_AT">New items</option>
-                <option value="BEST_SELLING">Trending</option>
+                <option value="RELEVANCE">Relevância</option>
+                <option value="PRICE">Preço</option>
+                <option value="TITLE">Título</option>
+                <option value="CREATED_AT">Novos itens</option>
+                <option value="BEST_SELLING">Em alta</option>
               </select>
             </label>
             <SortIcon className={sortIcon} />
@@ -193,7 +193,7 @@ function SearchPage({
         </div>
         <section className={[filterStyle, showModal && modalOpen].join(" ")}>
           <div className={filterTitle}>
-            <h2>Filter</h2>
+            <h2>Filtrar</h2>
             <button aria-hidden onClick={() => setShowModal(false)}>
               <CrossIcon />
             </button>
@@ -216,15 +216,15 @@ function SearchPage({
         >
           {isFetching ? (
             <p className={progressStyle}>
-              <Spinner aria-valuetext="Searching" /> Searching
+              <Spinner aria-valuetext="Searching" /> Procurando
               {filters.term ? ` for "${filters.term}"…` : `…`}
             </p>
           ) : (
             <p className={resultsStyle}>
-              Search results{" "}
+              Resultados da Pesquisa{" "}
               {filters.term && (
                 <>
-                  for "<span>{filters.term}</span>"
+                  para "<span>{filters.term}</span>"
                 </>
               )}
             </p>
@@ -283,7 +283,7 @@ function SearchBar({ defaultTerm, setFilters }) {
           setTerm(e.target.value)
           debouncedSetFilters(e.target.value)
         }}
-        placeholder="Search..."
+        placeholder="Procurar..."
       />
       {term ? (
         <button
@@ -293,7 +293,7 @@ function SearchBar({ defaultTerm, setFilters }) {
             setTerm("")
             setFilters((filters) => ({ ...filters, term: "" }))
           }}
-          aria-label="Clear search query"
+          aria-label="Limpar pesquisa"
         >
           <CrossIcon />
         </button>
@@ -311,7 +311,7 @@ function Pagination({ previousPage, hasPreviousPage, nextPage, hasNextPage }) {
         className={paginationButton}
         disabled={!hasPreviousPage}
         onClick={previousPage}
-        aria-label="Previous page"
+        aria-label="Página anterior"
       >
         <CgChevronLeft />
       </button>
@@ -319,7 +319,7 @@ function Pagination({ previousPage, hasPreviousPage, nextPage, hasNextPage }) {
         className={paginationButton}
         disabled={!hasNextPage}
         onClick={nextPage}
-        aria-label="Next page"
+        aria-label="Próxima página"
       >
         <CgChevronRight />
       </button>
