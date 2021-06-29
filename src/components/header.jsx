@@ -29,10 +29,7 @@ export function Header() {
   return (
     <div className={container} style={{ "flex-direction": "column" }}>
       <div className={headerStrip}>
-        <h3>Seu oásis é aqui&nbsp;</h3> {"-"}
-        <h3>&nbsp;Aqui você encontra o que não há em lugar nenhum&nbsp;</h3>
-        {" - "}
-        <h3>&nbsp;Para todos os gostos. Para todos os bolsos. Para você.</h3>
+        <h3>Frete grátis para todo o Brasil</h3>
       </div>
       <header className={header}>
         <Link to="/" className={logoCss}>
