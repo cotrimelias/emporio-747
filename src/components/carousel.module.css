@@ -1,0 +1,24 @@
+.carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 32px;
+}
+
+.desktopImage {
+    display: block;
+    width: 80%;
+}
+
+.mobileImage {
+    display: none !important;
+}
+
+@media (max-width: 1025px) {
+    .desktopImage {
+        display: none !important;
+    }
+    .mobileImage {
+        display: block !important;
+    }
+}

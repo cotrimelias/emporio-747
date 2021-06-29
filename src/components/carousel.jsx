@@ -1,23 +1,22 @@
 import * as React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { StaticImage } from "gatsby-plugin-image"
+import {
+  carouselContainer,
+  desktopImage,
+  mobileImage,
+} from "../components/carousel.module.css"
 
 export function Carousel({}) {
   return (
-    <div
-      style={{
-        display: "flex",
-        "align-items": "center",
-        "justify-content": "center",
-        "padding-bottom": "32px",
-      }}
-    >
+    <div className={carouselContainer}>
       <StaticImage
         src="../images/carousel1.png"
-        alt="Frete Grátis"
+        alt="Frete Grátis em toda a loja para o Brasil inteiro"
         placeholder="blurred"
-        style={{ width: "80%" }}
+        className={desktopImage}
       />
+      <StaticImage src="../images/mcarousel1.png" className={mobileImage} />
     </div>
   )
 }

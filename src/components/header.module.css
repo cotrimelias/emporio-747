@@ -17,6 +17,12 @@
     height: 35px;
 }
 
+@media (max-width: 1025px) {
+    .headerStrip {
+        flex-direction: column;
+    }
+}
+
 .header {
     display: grid;
     width: 100%;

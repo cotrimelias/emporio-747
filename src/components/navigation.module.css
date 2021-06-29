@@ -39,3 +39,9 @@
 .navLink[aria-active="page"]:hover {
     color: var(--primary);
 }
+
+@media (max-width: 1025px) {
+    .navStyle {
+        justify-content: flex-start;
+    }
+}

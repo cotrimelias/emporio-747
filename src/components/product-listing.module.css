@@ -5,3 +5,9 @@
     gap: var(--size-gutter-raw);
     padding: 64px 188px;
 }
+
+@media (max-width: 1025px) {
+    .listingContainerStyle {
+        padding: 0;
+    }
+}
