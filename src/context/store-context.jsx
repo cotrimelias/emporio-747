@@ -4,8 +4,8 @@ import Client from "shopify-buy"
 
 const client = Client.buildClient(
   {
-    domain: process.env.GATSBY_SHOPIFY_STORE_URL,
-    storefrontAccessToken: process.env.GATSBY_STOREFRONT_ACCESS_TOKEN,
+    domain: "emporio-747.myshopify.com",
+    storefrontAccessToken: "578c7382b0863fbfb7b976a974adcad6",
   },
   fetch
 )
