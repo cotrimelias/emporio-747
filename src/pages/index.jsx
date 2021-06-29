@@ -15,7 +15,7 @@ import {
 
 export const query = graphql`
   query {
-    shopifyCollection {
+    shopifyCollection(title: { eq: "Página Principal" }) {
       products {
         ...ProductCard
       }
