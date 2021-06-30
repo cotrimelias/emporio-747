@@ -32,7 +32,7 @@ export function Header() {
         <h3>Frete grátis para todo o Brasil</h3>
       </div>
       <header className={header}>
-        <Link to="/" className={logoCss}>
+        <Link to="/" className={logoCss} alt={"Página inicial do Empório 747"}>
           <MainLogo />
           {/* <div className={textlogo}>empório 747</div> */}
         </Link>
