@@ -54,6 +54,8 @@ export function ProductCard({ product, eager }) {
           image={firstImage?.gatsbyImageData ?? storefrontImageData}
           loading={eager ? "eager" : "lazy"}
           placeholder={"blurred"}
+          width={330}
+          height={330}
         />
       </div>
       <div className={productDetailsStyle}>
@@ -77,7 +79,7 @@ export const query = graphql`
     images {
       id
       altText
-      gatsbyImageData(aspectRatio: 1, width: 640)
+      gatsbyImageData(aspectRatio: 1, width: 330)
     }
     priceRangeV2 {
       minVariantPrice {

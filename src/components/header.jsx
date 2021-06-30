@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StoreContext } from "../context/store-context"
-import Logo from "../icons/logo"
+import MainLogo from "../icons/mainlogo"
 import { Navigation } from "./navigation"
 import { CartButton } from "./cart-button"
 import { AccountButton } from "./account-button"
@@ -33,7 +33,8 @@ export function Header() {
       </div>
       <header className={header}>
         <Link to="/" className={logoCss}>
-          <div className={textlogo}>empório 747</div>
+          <MainLogo />
+          {/* <div className={textlogo}>empório 747</div> */}
         </Link>
         <Navigation className={nav} />
         <div style={{ display: "flex" }}>

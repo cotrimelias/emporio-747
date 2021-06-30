@@ -7,7 +7,7 @@
     white-space: nowrap;
     font-weight: var(--light);
     font-family: "Public Sans";
-    margin-right: 10%;
+    /* margin-right: 10%; */
     text-transform: uppercase;
 }
 

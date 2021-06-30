@@ -11,9 +11,10 @@ export function Carousel({}) {
   return (
     <div className={carouselContainer}>
       <StaticImage
-        src="../images/carousel1.png"
+        src="../images/carousel2.png"
         alt="Frete Grátis em toda a loja para o Brasil inteiro"
         placeholder="blurred"
+        quality={100}
         className={desktopImage}
       />
       <StaticImage src="../images/mcarousel1.png" className={mobileImage} />
