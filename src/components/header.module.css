@@ -18,8 +18,14 @@
 }
 
 @media (max-width: 1025px) {
+    .logo {
+        width: 90vw !important;
+    }
     .headerStrip {
         flex-direction: column;
+    }
+    .menuItems {
+        display: none !important;
     }
 }
 
@@ -46,7 +52,7 @@
     justify-self: flex-end;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1600px) {
     .header {
         grid-template-areas: "logo navHeader searchButton cartButton";
     }

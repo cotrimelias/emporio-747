@@ -13,8 +13,8 @@ import {
   logo as logoCss,
   searchButton,
   nav,
-  textlogo,
   headerStrip,
+  menuItems,
 } from "./header.module.css"
 
 export function Header() {
@@ -37,7 +37,7 @@ export function Header() {
           {/* <div className={textlogo}>empório 747</div> */}
         </Link>
         <Navigation className={nav} />
-        <div style={{ display: "flex" }}>
+        <div className={menuItems} style={{ display: "flex" }}>
           <Link to="/search" className={searchButton}>
             <SearchIcon />
           </Link>

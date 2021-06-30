@@ -17,7 +17,7 @@ export function Carousel({}) {
         quality={100}
         className={desktopImage}
       />
-      <StaticImage src="../images/mcarousel1.png" className={mobileImage} />
+      <StaticImage src="../images/mcarousel2.png" className={mobileImage} />
     </div>
   )
 }
