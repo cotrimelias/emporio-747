@@ -7,7 +7,7 @@ export function AccountButton(props) {
   return (
     <Link
       aria-label={"Botão minha conta"}
-      to="/account"
+      to="https://emporio-747.myshopify.com/account/login"
       className={accountButton}
     >
       <AccountIcon />
