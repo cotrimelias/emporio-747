@@ -2,13 +2,13 @@ require("dotenv").config()
 
 module.exports = {
     siteMetadata: {
-        siteTitle: "Empório 747",
-        siteTitleDefault: "Empório 747",
-        siteUrl: "https://emporio747.com",
+        siteTitle: "Nave Pop",
+        siteTitleDefault: "Nave Pop",
+        siteUrl: "https://navepop.com.br",
         hrefLang: "pt",
         siteDescription: "Uma loja de variedades e raridades perfeita para você",
         siteImage: "/default-og-image.jpg",
-        twitter: "@emporio747",
+        twitter: "@nave_pop",
     },
     flags: {
         FAST_DEV: true,
