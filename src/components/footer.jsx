@@ -17,7 +17,7 @@ export function Footer() {
         <div className={logos}>
           <Logo />
         </div>
-        <strong>Empório 747</strong>
+        <strong>Nave Pop</strong>
       </div>
       <nav className={links} aria-label="footer">
         <ul className={footerNavList}>
