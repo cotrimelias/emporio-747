@@ -27,6 +27,9 @@ export function Footer() {
           <li className={footerNavListItem}>
             <a href="/politicadegarantia">Política de Garantia</a>
           </li>
+          <li className={footerNavListItem}>
+            <a href="/politicadeprivacidade">Política de Privacidade</a>
+          </li>
         </ul>
       </nav>
       <div className={copyright}>

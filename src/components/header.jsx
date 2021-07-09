@@ -32,9 +32,9 @@ export function Header() {
         <h3>Frete grátis para todo o Brasil</h3>
       </div>
       <header className={header}>
-        <Link to="/" className={logoCss} alt={"Página inicial do Empório 747"}>
+        <Link to="/" className={logoCss} alt={"Página inicial da Nave Pop"}>
           <MainLogo />
-          {/* <div className={textlogo}>empório 747</div> */}
+          {/* <div className={textlogo}>nave pop</div> */}
         </Link>
         <Navigation className={nav} />
         <div className={menuItems} style={{ display: "flex" }}>
