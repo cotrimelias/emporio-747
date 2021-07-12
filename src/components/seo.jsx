@@ -84,12 +84,12 @@ export function Seo({
         href="/apple-touch-icon.png"
       />
       {/* The following meta tag is for demonstration only and can be removed */}
-      {!!process.env.GATSBY_DEMO_STORE && (
+      {/* {!!process.env.GATSBY_DEMO_STORE && (
         <meta
           name="robots"
           content="noindex, nofollow"
         />
-      )}
+      )} */}
       {children}
     </Helmet>
   )

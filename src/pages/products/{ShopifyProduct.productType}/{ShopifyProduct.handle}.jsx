@@ -109,8 +109,26 @@ export default function Product({ data: { product, suggestions } }) {
           title={title}
           description={description}
           image={getSrc(firstImage.gatsbyImageData)}
-        />
+        ></Seo>
       ) : undefined}
+      <meta property="og:price:amount" content={variant.price} />
+      <meta
+        property="og:price:currency"
+        content={priceRangeV2.minVariantPrice.currencyCode}
+      />
+      <meta property="product:brand" content="Nave Pop" />
+      <meta property="product:availability" content="in stock" />
+      <meta property="product:condition" content="new" />
+      <meta property="product:price:amount" content={variant.price} />
+      <meta
+        property="product:price:currency"
+        content={priceRangeV2.minVariantPrice.currencyCode}
+      />
+      <meta
+        property="product:retailer_item_id"
+        content={productVariant.storefrontId}
+      />
+
       <div className={container}>
         <div className={productBox}>
           {hasImages && (
@@ -219,6 +237,7 @@ export const query = graphql`
     product: shopifyProduct(id: { eq: $id }) {
       title
       description
+      handle
       productType
       productTypeSlug: gatsbyPath(
         filePath: "/products/{ShopifyProduct.productType}"
