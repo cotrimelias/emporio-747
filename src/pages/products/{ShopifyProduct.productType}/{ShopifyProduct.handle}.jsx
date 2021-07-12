@@ -108,13 +108,18 @@ export default function Product({ data: { product, suggestions } }) {
         <Seo
           title={title}
           description={description}
-          image={getSrc(firstImage.gatsbyImageData)}
+          productimage={getSrc(firstImage.gatsbyImageData)}
         ></Seo>
       ) : undefined}
       <meta property="og:price:amount" content={variant.price} />
       <meta
         property="og:price:currency"
         content={priceRangeV2.minVariantPrice.currencyCode}
+      />
+      <meta property="og:image" content={getSrc(firstImage.gatsbyImageData)} />
+      <meta
+        property="product:image"
+        content={getSrc(firstImage.gatsbyImageData)}
       />
       <meta property="product:brand" content="Nave Pop" />
       <meta property="product:availability" content="in stock" />
