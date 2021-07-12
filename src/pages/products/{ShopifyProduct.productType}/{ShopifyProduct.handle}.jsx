@@ -121,7 +121,7 @@ export default function Product({ data: { product, suggestions } }) {
       <meta property="product:condition" content="new" />
       <meta property="product:price:amount" content={variant.price} />
       <meta
-        property="product:image"
+        property="image_link"
         content={getSrc(firstImage.gatsbyImageData)}
       />
       <meta
