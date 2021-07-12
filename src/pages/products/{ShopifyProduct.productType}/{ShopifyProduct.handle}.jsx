@@ -121,6 +121,10 @@ export default function Product({ data: { product, suggestions } }) {
       <meta property="product:condition" content="new" />
       <meta property="product:price:amount" content={variant.price} />
       <meta
+        property="product:image"
+        content={getSrc(firstImage.gatsbyImageData)}
+      />
+      <meta
         property="product:price:currency"
         content={priceRangeV2.minVariantPrice.currencyCode}
       />
