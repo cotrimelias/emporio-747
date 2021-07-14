@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { StoreContext } from "../context/store-context"
 import MainLogo from "../icons/mainlogo"
 import { Navigation } from "./navigation"
+import { MenuButton } from "./menu-button"
 import { CartButton } from "./cart-button"
 import { AccountButton } from "./account-button"
 import SearchIcon from "../icons/search"
@@ -15,6 +16,7 @@ import {
   nav,
   headerStrip,
   menuItems,
+  menuButton,
 } from "./header.module.css"
 
 export function Header() {
@@ -38,10 +40,12 @@ export function Header() {
         </Link>
         <Navigation className={nav} />
         <div className={menuItems} style={{ display: "flex" }}>
+          <Link className={menuButton}>
+            <MenuButton />
+          </Link>
           <Link to="/search" className={searchButton}>
             <SearchIcon />
           </Link>
-
           <CartButton quantity={quantity} />
           <AccountButton />
         </div>

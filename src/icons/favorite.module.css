@@ -1,0 +1,21 @@
+.favoritestyle {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 125ms;
+    position: relative;
+    z-index: 1;
+    right: -82%;
+    margin-bottom: -40px;
+    transform: translateY(15px);
+    background-color: white;
+}
+
+.favoritestyle:hover {
+    background-color: rgb(220, 220, 220);
+    border-radius: 25%;
+}

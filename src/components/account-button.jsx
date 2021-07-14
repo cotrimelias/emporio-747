@@ -5,13 +5,13 @@ import { accountButton, badge } from "./account-button.module.css"
 
 export function AccountButton(props) {
   return (
-    <Link
+    <a
       aria-label={"Botão minha conta"}
-      to="https://emporio-747.myshopify.com/account/login"
+      href="https://emporio-747.myshopify.com/account/login"
       className={accountButton}
     >
       <AccountIcon />
-    </Link>
+    </a>
   )
 }
 

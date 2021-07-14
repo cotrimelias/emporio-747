@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getShopifyImage } from "gatsby-source-shopify"
+import FavoriteButton from "../icons/favorite"
 import { formatPrice } from "../utils/format-price"
 import {
   productCardStyle,
@@ -10,6 +11,7 @@ import {
   productDetailsStyle,
   productVendorStyle,
   productPrice,
+  productCardContainer,
 } from "./product-card.module.css"
 
 export function ProductCard({ product, eager }) {
@@ -43,29 +45,32 @@ export function ProductCard({ product, eager }) {
   }
 
   return (
-    <Link
-      className={productCardStyle}
-      to={slug}
-      aria-label={`View ${title} product page`}
-    >
-      <div className={productImageStyle} data-name="product-image-box">
-        <GatsbyImage
-          alt={firstImage?.altText ?? title}
-          image={firstImage?.gatsbyImageData ?? storefrontImageData}
-          loading={eager ? "eager" : "lazy"}
-          placeholder={"blurred"}
-          width={330}
-          height={330}
-        />
-      </div>
-      <div className={productDetailsStyle}>
-        <div className={productVendorStyle}>{vendor}</div>
-        <h2 as="h2" className={productHeadingStyle}>
-          {title}
-        </h2>
-        <div className={productPrice}>{price}</div>
-      </div>
-    </Link>
+    <div className={productCardContainer}>
+      <FavoriteButton />
+      <Link
+        className={productCardStyle}
+        to={slug}
+        aria-label={`View ${title} product page`}
+      >
+        <div className={productImageStyle} data-name="product-image-box">
+          <GatsbyImage
+            alt={firstImage?.altText ?? title}
+            image={firstImage?.gatsbyImageData ?? storefrontImageData}
+            loading={eager ? "eager" : "lazy"}
+            placeholder={"blurred"}
+            width={330}
+            height={330}
+          />
+        </div>
+        <div className={productDetailsStyle}>
+          <div className={productVendorStyle}>{vendor}</div>
+          <h2 as="h2" className={productHeadingStyle}>
+            {title}
+          </h2>
+          <div className={productPrice}>{price}</div>
+        </div>
+      </Link>
+    </div>
   )
 }
 

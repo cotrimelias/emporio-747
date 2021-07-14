@@ -1,3 +1,7 @@
+.productCardContainer {
+    max-height: 376px;
+}
+
 .productCardStyle {
     max-width: 327px;
     cursor: pointer;
@@ -15,6 +19,13 @@
     align-items: center;
     justify-content: center;
     font-weight: var(--semibold);
+    max-width: 330px;
+}
+
+@media (max-width: 1024px) {
+    .productCardContainer {
+        max-height: 405px !important;
+    }
 }
 
 .productVendorStyle {

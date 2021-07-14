@@ -117,10 +117,6 @@ export default function Product({ data: { product, suggestions } }) {
         content={priceRangeV2.minVariantPrice.currencyCode}
       />
       <meta property="og:image" content={getSrc(firstImage.gatsbyImageData)} />
-      <meta
-        property="product:image"
-        content={getSrc(firstImage.gatsbyImageData)}
-      />
       <meta property="product:brand" content="Nave Pop" />
       <meta property="product:availability" content="in stock" />
       <meta property="product:condition" content="new" />

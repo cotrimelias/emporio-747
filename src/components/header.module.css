@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     position: sticky;
-    z-index: 1;
+    z-index: 2;
     top: 0;
 }
 
@@ -18,14 +18,30 @@
 }
 
 @media (max-width: 1025px) {
+    .header {
+        grid-template-rows: 5fr 3fr !important;
+        grid-template-columns: 1fr !important;
+        grid-template-areas: "menuItems logo" "navHeader navHeader" !important;
+    }
     .logo {
         width: 90vw !important;
+        margin-left: -170px;
+    }
+    .menuButton {
+        display: grid !important;
+    }
+    .menuItems a {
+        margin-left: -25%;
+        color: rgba(255, 255, 255, 0) !important;
+        pointer-events: none;
+    }
+    .menuItems a.menuButton {
+        margin-left: 0;
+        color: var(--black) !important;
+        pointer-events: all !important;
     }
     .headerStrip {
         flex-direction: column;
-    }
-    .menuItems {
-        display: none !important;
     }
 }
 
@@ -54,7 +70,7 @@
 
 @media (min-width: 1600px) {
     .header {
-        grid-template-areas: "logo navHeader searchButton cartButton";
+        grid-template-areas: "logo navHeader menuItems";
     }
 }
 
@@ -88,6 +104,20 @@
 .nav {
     grid-area: navHeader;
     align-self: stretch;
+}
+
+.menuItems {
+    grid-area: menuItems;
+}
+
+.menuButton {
+    display: none;
+    color: var(--black);
+    width: var(--size-input);
+    height: var(--size-input);
+    place-items: center;
+    transition: 125ms;
+    cursor: pointer;
 }
 
 .searchButton {
