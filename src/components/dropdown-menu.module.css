@@ -1,0 +1,19 @@
+.DropdownMenuStyle {
+    width: 100%;
+}
+
+.dropdownbuttonStyle {
+    display: none;
+    color: var(--black);
+    width: var(--size-input);
+    height: var(--size-input);
+    place-items: center;
+    transition: 125ms;
+    cursor: pointer;
+}
+
+@media (max-width: 1025px) {
+    .dropdownbuttonStyle {
+        display: flex;
+    }
+}

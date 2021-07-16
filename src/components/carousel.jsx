@@ -1,5 +1,5 @@
 import * as React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+// import { GatsbyImage } from "gatsby-plugin-image"
 import { StaticImage } from "gatsby-plugin-image"
 import {
   carouselContainer,
@@ -7,7 +7,7 @@ import {
   mobileImage,
 } from "../components/carousel.module.css"
 
-export function Carousel({}) {
+export function Carousel() {
   return (
     <div className={carouselContainer}>
       <StaticImage

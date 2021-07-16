@@ -1,10 +1,10 @@
 import * as React from "react"
 import { useState } from "react"
 import Lottie from "react-lottie"
-import animationData from "../icons/menuAnimated.json"
+import { dropdownbuttonStyle } from "./dropdown-menu.module.css"
+import animationData from "../icons/dropdownIcon.json"
 
-export const MenuButton = () => {
-  const [isOpen, setOpenState] = useState(false)
+export const DropdownButton = () => {
   const [animationState, setAnimationState] = useState({
     isStopped: true,
     isPause: false,
@@ -21,14 +21,13 @@ export const MenuButton = () => {
 
   return (
     <div
+      className={dropdownbuttonStyle}
       onClick={() => {
         setAnimationState({
           ...animationState,
           isStopped: false,
           direction: animationState.direction === 1 ? -1 : 1,
         })
-        setOpenState(!isOpen)
-        console.log(isOpen, animationState)
       }}
     >
       <Lottie
@@ -44,4 +43,4 @@ export const MenuButton = () => {
   )
 }
 
-export default MenuButton
+export default DropdownButton

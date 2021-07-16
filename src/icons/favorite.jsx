@@ -23,6 +23,7 @@ export const FavoriteButton = () => {
   return (
     <div
       className={favoritestyle}
+      role={"button"}
       onClick={() => {
         setAnimationState({
           ...animationState,

@@ -1,17 +1,17 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import AccountIcon from "../icons/account"
-import { accountButton, badge } from "./account-button.module.css"
+import { accountButton } from "./account-button.module.css"
 
 export function AccountButton(props) {
   return (
-    <a
+    <Link
       aria-label={"Botão minha conta"}
-      href="https://emporio-747.myshopify.com/account/login"
+      to="/account"
       className={accountButton}
     >
       <AccountIcon />
-    </a>
+    </Link>
   )
 }
 

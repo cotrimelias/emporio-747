@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Layout } from "../components/layout"
 
-export default function AccountPage() {
+export default function WishList() {
   return (
     <Layout>
-      <h1>Account Page</h1>
+      <div></div>
     </Layout>
   )
 }

@@ -190,7 +190,7 @@ export default function Product({ data: { product, suggestions } }) {
                   <div className={selectVariant} key={id}>
                     <select
                       aria-label="Variants"
-                      onChange={(event) => handleOptionChange(index, event)}
+                      onBlur={(event) => handleOptionChange(index, event)}
                     >
                       <option value="">{`Select ${name}`}</option>
                       {values.map((value) => (

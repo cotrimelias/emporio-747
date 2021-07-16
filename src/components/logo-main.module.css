@@ -1,0 +1,32 @@
+@media (max-width: 1025px) {
+    .logo {
+        width: 95% !important;
+        padding: 7px 0px 0px 0px !important;
+    }
+}
+
+@media (min-width: 1600px) {
+    .logo {
+        width: 170% !important;
+    }
+}
+
+.logo {
+    display: flex;
+    grid-area: logo;
+    height: 100%;
+    width: 30%;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color-secondary);
+}
+
+.logo:hover {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.logo[aria-current="page"] {
+    color: var(--primary);
+}

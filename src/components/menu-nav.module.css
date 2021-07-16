@@ -1,0 +1,32 @@
+.searchButton {
+    color: var(--black);
+    grid-area: searchButton;
+    width: var(--size-input);
+    height: var(--size-input);
+    display: grid;
+    place-items: center;
+    transition: 125ms;
+}
+
+.searchButton:hover {
+    color: var(--brown);
+}
+
+.searchButton[aria-current="page"] {
+    color: var(--primary);
+}
+
+.menunavStyle {
+    grid-area: menunavStyle;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media (max-width: 1025px) {
+    .menunavStyle {
+        display: none !important;
+    }
+}

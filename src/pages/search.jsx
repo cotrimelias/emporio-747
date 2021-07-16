@@ -179,7 +179,7 @@ function SearchPage({
               <select
                 value={sortKey}
                 // eslint-disable-next-line
-                onChange={(e) => setSortKey(e.target.value)}
+                onBlur={(e) => setSortKey(e.target.value)}
               >
                 <option value="RELEVANCE">Relevância</option>
                 <option value="PRICE">Preço</option>

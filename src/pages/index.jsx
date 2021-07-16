@@ -5,13 +5,6 @@ import { Layout } from "../components/layout"
 import { ProductListing } from "../components/product-listing"
 import { Carousel } from "../components/carousel"
 import { HeroText } from "../components/hero"
-import {
-  container,
-  intro,
-  callOut,
-  callToAction,
-  deployButton,
-} from "./index.module.css"
 
 export const query = graphql`
   query {
