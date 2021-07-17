@@ -1,4 +1,5 @@
 .DropdownMenuStyle {
+    border: 1px solid lightgrey;
     display: flex;
     flex-direction: column;
     align-content: center;

@@ -37,7 +37,8 @@ export default function CartPage() {
             <h1 className={emptyStateHeading}>Seu carrinho está vazio</h1>
             <p>Parece que você ainda não encontrou nada :&#40;</p>
             <p>
-              A gente entende que às vezes é difícil, mas talvez isso ajude:
+              A gente entende que às vezes é difícil escolher, mas talvez isso
+              ajude:
             </p>
             <Link to="/search?s=BEST_SELLING" className={emptyStateLink}>
               Ver produtos em alta

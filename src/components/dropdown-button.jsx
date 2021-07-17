@@ -34,7 +34,7 @@ export const DropdownButton = ({ quantity }) => {
         options={defaultOptions}
         height={40}
         width={40}
-        speed={3}
+        speed={4}
         direction={animationState.direction}
         isStopped={animationState.isStopped}
         isPaused={animationState.isPaused}
