@@ -36,3 +36,11 @@
 .cartButton[aria-current="page"] {
     color: var(--primary);
 }
+
+@media (max-width: 1024px) {
+    .badge {
+        width: 22px;
+        bottom: 4px !important;
+        left: 25px !important;
+    }
+}

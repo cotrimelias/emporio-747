@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import SearchIcon from "../icons/search"
 import { searchButton } from "./menu-nav.module.css"
 
-export function SearchButton() {
+export function SearchButton({ children }) {
   return (
     <Link
       aria-label={"Botão de Pesquisa"}
@@ -11,6 +11,7 @@ export function SearchButton() {
       className={searchButton}
     >
       <SearchIcon />
+      {children}
     </Link>
   )
 }

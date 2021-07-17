@@ -1,5 +1,53 @@
 .DropdownMenuStyle {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: 83vh;
+    top: 17vh;
+    left: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    font-weight: var(--light);
+    font-family: "Public Sans";
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.DropdownMenuStyle h2 {
+    padding: 10px 5px;
+}
+
+.DropdownLinks {
+    padding-top: 15px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.DropdownLinks a {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.DropdownLinks a svg {
+    width: 48px;
+    height: 24px;
+}
+
+.DropdownLinks a div .badge {
+    bottom: 4px !important;
+    left: 25px !important;
 }
 
 .dropdownbuttonStyle {
@@ -12,8 +60,29 @@
     cursor: pointer;
 }
 
+.badge {
+    display: none;
+}
+
 @media (max-width: 1025px) {
     .dropdownbuttonStyle {
         display: flex;
+    }
+    .badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary);
+        box-shadow: 0 0 0 2px white;
+        color: var(--text-color-inverted);
+        font-size: var(--text-xs);
+        font-weight: var(--bold);
+        border-radius: var(--radius-rounded);
+        position: absolute;
+        top: 50%;
+        left: 12%;
+        height: 16px;
+        min-width: 16px;
+        padding: 0 var(--space-sm);
     }
 }

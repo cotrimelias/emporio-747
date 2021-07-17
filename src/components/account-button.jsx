@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import AccountIcon from "../icons/account"
 import { accountButton } from "./account-button.module.css"
 
-export function AccountButton(props) {
+export function AccountButton({ props, children }) {
   return (
     <Link
       aria-label={"Botão minha conta"}
@@ -11,6 +11,7 @@ export function AccountButton(props) {
       className={accountButton}
     >
       <AccountIcon />
+      {children}
     </Link>
   )
 }

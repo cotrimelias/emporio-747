@@ -1,10 +1,10 @@
 import * as React from "react"
 import { useState } from "react"
 import Lottie from "react-lottie"
-import { dropdownbuttonStyle } from "./dropdown-menu.module.css"
+import { dropdownbuttonStyle, badge } from "./dropdown-menu.module.css"
 import animationData from "../icons/dropdownIcon.json"
 
-export const DropdownButton = () => {
+export const DropdownButton = ({ quantity }) => {
   const [animationState, setAnimationState] = useState({
     isStopped: true,
     isPause: false,
@@ -39,6 +39,9 @@ export const DropdownButton = () => {
         isStopped={animationState.isStopped}
         isPaused={animationState.isPaused}
       />
+      {animationState.direction === -1 && (
+        <>{quantity > 0 && <div className={badge}>{quantity}</div>}</>
+      )}
     </div>
   )
 }
