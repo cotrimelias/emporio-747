@@ -27,7 +27,19 @@ import {
   addToCartStyle,
   metaSection,
   productDescription,
+  SlideDesktop,
+  SlideMobile,
 } from "./product-page.module.css"
+
+// Swiper stuff
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/swiper-bundle.css"
+import "swiper/components/navigation/navigation.min.css"
+import "swiper/components/pagination/pagination.min.css"
+import "swiper/components/scrollbar/scrollbar.min.css"
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
+// Swiper stuff
 
 export default function Product({ data: { product, suggestions } }) {
   const {
@@ -86,6 +98,12 @@ export default function Product({ data: { product, suggestions } }) {
       return isEqual(currentOptions, variant.selectedOptions)
     })
 
+    document
+      .getElementById("product-page-module--SlideDesktop--dQqHl")
+      .swiper.slideTo(selectedVariant.position, 250)
+    document
+      .getElementById("product-page-module--SlideMobile--1X9iJ")
+      .swiper.slideTo(selectedVariant.position, 250)
     setVariant({ ...selectedVariant })
   }
 
@@ -137,39 +155,124 @@ export default function Product({ data: { product, suggestions } }) {
       <div className={container}>
         <div className={productBox}>
           {hasImages && (
-            <div className={productImageWrapper}>
-              <div
-                role="group"
-                aria-label="gallery"
-                aria-describedby="instructions"
+            <div>
+              <Swiper
+                id={SlideMobile}
+                className={SlideMobile}
+                spaceBetween={150}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                effect={"cube"}
+                style={{ width: "80vw" }}
+                centeredSlides={true}
               >
-                <ul className={productImageList}>
-                  {images.map((image, index) => (
-                    <li
-                      key={`product-image-${image.id}`}
-                      className={productImageListItem}
-                    >
-                      <GatsbyImage
-                        objectFit="contain"
-                        loading={index === 0 ? "eager" : "eager"}
-                        alt={
-                          image.altText
-                            ? image.altText
-                            : `Product Image of ${title} #${index + 1}`
-                        }
-                        image={image.gatsbyImageData}
-                      />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              {hasMultipleImages && (
-                <div className={scrollForMore} id="instructions">
-                  <span aria-hidden="true">←</span> scroll for more{" "}
-                  <span aria-hidden="true">→</span>
-                </div>
-              )}
+                {images.map((image, index) => (
+                  <SwiperSlide
+                    width={"80vw"}
+                    key={`product-image-${image.id}`}
+                    style={{
+                      width: "80vw",
+                      height: "80vw",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: "row",
+                      alignContent: "center",
+                      flexWrap: "nowrap",
+                    }}
+                  >
+                    <GatsbyImage
+                      objectFit="contain"
+                      placeholder={"blurred"}
+                      loading={index === 0 ? "lazy" : "eager"}
+                      alt={
+                        image.altText
+                          ? image.altText
+                          : `Product Image of ${title} #${index + 1}`
+                      }
+                      image={image.gatsbyImageData}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <Swiper
+                id={SlideDesktop}
+                className={SlideDesktop}
+                spaceBetween={150}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                effect={"cube"}
+                style={{ width: "640px" }}
+                centeredSlides={true}
+              >
+                {images.map((image, index) => (
+                  <SwiperSlide
+                    className={SlideDesktop}
+                    width={"640px"}
+                    key={`product-image-${image.id}`}
+                    style={{
+                      width: "640px",
+                      height: "640px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: "row",
+                      alignContent: "center",
+                      flexWrap: "nowrap",
+                    }}
+                  >
+                    <GatsbyImage
+                      objectFit="contain"
+                      placeholder={"blurred"}
+                      loading={index === 0 ? "lazy" : "eager"}
+                      alt={
+                        image.altText
+                          ? image.altText
+                          : `Product Image of ${title} #${index + 1}`
+                      }
+                      image={image.gatsbyImageData}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
+            // <div className={productImageWrapper}>
+            //   <div
+            //     role="group"
+            //     aria-label="gallery"
+            //     aria-describedby="instructions"
+            //   >
+            //     <ul className={productImageList}>
+            //       {images.map((image, index) => (
+            //         <li
+            //           key={`product-image-${image.id}`}
+            //           className={productImageListItem}
+            //         >
+            //           <GatsbyImage
+            //             objectFit="contain"
+            //             loading={index === 0 ? "eager" : "eager"}
+            //             alt={
+            //               image.altText
+            //                 ? image.altText
+            //                 : `Product Image of ${title} #${index + 1}`
+            //             }
+            //             image={image.gatsbyImageData}
+            //           />
+            //         </li>
+            //       ))}
+            //     </ul>
+            //   </div>
+            //   {hasMultipleImages && (
+            //     <div className={scrollForMore} id="instructions">
+            //       <span aria-hidden="true">←</span> scroll for more{" "}
+            //       <span aria-hidden="true">→</span>
+            //     </div>
+            //   )}
+            // </div>
           )}
           {!hasImages && (
             <span className={noImagePreview}>No Preview image</span>
@@ -190,7 +293,9 @@ export default function Product({ data: { product, suggestions } }) {
                   <div className={selectVariant} key={id}>
                     <select
                       aria-label="Variants"
-                      onBlur={(event) => handleOptionChange(index, event)}
+                      onChange={(event) => {
+                        handleOptionChange(index, event)
+                      }}
                     >
                       <option value="">{`Select ${name}`}</option>
                       {values.map((value) => (
@@ -269,6 +374,7 @@ export const query = graphql`
         storefrontId
         title
         price
+        position
         selectedOptions {
           name
           value

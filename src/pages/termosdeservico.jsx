@@ -1,9 +1,11 @@
 import * as React from "react"
 import { Layout } from "../components/layout"
+import { SwiperSlider } from "../components/swiper"
 
 export default function TermosPage() {
   return (
     <Layout>
+      <SwiperSlider />
       <h3
         style={{
           padding: "25px",
