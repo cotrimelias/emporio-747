@@ -27,8 +27,6 @@ export function Carousel() {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         effect={"cube"}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
         centeredSlides={true}
       >
         <SwiperSlide

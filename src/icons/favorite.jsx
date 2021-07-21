@@ -31,7 +31,6 @@ export const FavoriteButton = () => {
           direction: animationState.direction === 1 ? -1 : 1,
         })
         setOpenState(!isOpen)
-        console.log(isOpen, animationState)
       }}
     >
       <Lottie
